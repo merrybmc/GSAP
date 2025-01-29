@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="script.js"></script>
+
+<body>
+    <div class="orange">안녕하세요</div>
+    <div>ㅋㅋㅋㅋㅋ</div>
+</body>
+
+<script>
+    // gsap.from('.orange', { x: 400, y: 500 })
+
+    // gsap.fromTo('.orange', { x: 400, y: 400 }, { x: 200, y: 200 })
+    gsap.fromTo('.orange',
+        {
+            x: 300,
+            y: 400,
+            scale: 3,
+            backgroundColor: 'red',
+            rotation: 360,
+            duration: 10,
+            opacity: 0,
+            color: 'white',
+            padding: 0,
+            margin: 0,
+            width: 10,
+            height: 10
+        },
+        {
+            x: 100,
+            y: 100,
+            scale: 0.5,
+            backgroundColor: 'blue',
+            rotation: 0,
+            duration: 10,
+            opacity: 1,
+            color: 'orange',
+            // padding: '10',
+            paddingLeft: 500,
+            margin: '10',
+            width: 200,
+            height: 200
+
+        }
+    )
+</script>
+
+</html>
