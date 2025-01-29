@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="script.js"></script>
+
+<body>
+    <div class="stage">
+        <div class="orange box"></div>
+        <div class="pink box"></div>
+        <div class="green box"></div>
+        <div class="red box"></div>
+        <div class="blue box"></div>
+    </div>
+</body>
+
+<script>
+    // gsap.to('.orange', { x: 100 })
+    // gsap.to('.pink', { x: 100, delay: 0.3 })
+    // gsap.to('.green', { x: 100, delay: 0.6 })
+    // gsap.to('.red', { x: 100, delay: 0.9 })
+    // gsap.to('.blue', { x: 100, delay: 1.2 })
+
+    gsap.to('.box',
+        {
+            x: 100,
+            // stagger: 0.3,
+            stagger: {
+                // each: 0.3,
+                amount: 1,
+                // from: 'end'
+                // from: 'center'
+                from: 'edges'
+            }
+        })
+</script>
+
+</html>
