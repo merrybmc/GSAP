@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="script.js"></script>
+
+<body>
+    <div class="orange"></div>
+</body>
+
+<script>
+    gsap.to('.orange', {
+        x: 300,
+        repeat: 3,
+        delay: 2,
+        repeatDelay: 2,
+        yoyo: true
+    })
+</script>
+
+</html>
