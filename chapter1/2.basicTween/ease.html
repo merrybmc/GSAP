@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="script.js"></script>
+
+<body>
+    <div class="orange"></div>
+    <hr>
+    <div class="pink"></div>
+</body>
+
+<script>
+    gsap.to('.orange',
+        {
+            x: 600,
+            duration: 3,
+            ease: 'linear'
+        })
+    gsap.to('.pink',
+        {
+            x: 600,
+            duration: 3,
+            // ease: 'power1'
+            // ease: 'power2'
+            // ease: 'power3'
+            // ease: 'power4'
+            // ease: 'back'
+            // ease: 'bounce'
+            // ease: 'circ'
+            // ease: 'elastic'
+            // ease: 'expo'
+            // ease: 'sine'
+            ease: 'steps(12)'
+        })
+</script>
+
+</html>
