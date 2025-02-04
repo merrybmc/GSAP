@@ -98,21 +98,21 @@
 <script>
     let tl = gsap.timeline()
 
-    // tl을 쓸 경우 (delay가 필요없음)
-    // 코드의 순서대로 애니메이션 진행
-    tl.from('.sun', { duration: 1, opacity: 0, x: 50, y: 50 });
-    tl.from('.bird', { duration: 1, opacity: 0, y: 100 });
+    // delay를 따로 만들지 않아도 tl의 순서대로 처리
+    tl.from('.sun', { duration: 1, opacity: 0, x: 50, y: 50 })
+    tl.from('.bird', { duration: 1, opacity: 0, y: 100 })
     tl.from('.gress', {
-        duration: 1, opacity: 0, y: 100, stagger: {
+        duration: 1, opacity: 0, y: 100,
+        stagger: {
             each: 0.2,
             from: "center"
         }
-    });
+    })
     tl.from('.music', { duration: 1, opacity: 0, x: 100, y: 100 })
-    tl.from('.eye-left', { duration: 1, x: 30, repeat: -1, yoyo: true })
+    tl.from(".eye-left", { duration: 1, x: 30, repeat: -1, yoyo: true })
     tl.from('.eye-right', { duration: 1, x: 30, repeat: -1, yoyo: true })
+    tl.from('.mouse', { duration: 1, y: 30, repeat: -1, yoyo: true })
 
-    // tl을 쓰지 않을 경우
     // gsap.from('.sun', { duration: 1, opacity: 0, x: 50, y: 50 });
     // gsap.from('.bird', { delay: 1, duration: 1, opacity: 0, y: 100 });
     // gsap.from('.gress', { delay: 3, duration: 1, opacity: 0, y: 100 });
